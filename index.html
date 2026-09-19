@@ -71,8 +71,11 @@ nav a:hover::after{width:100%}
    reach the other pages; make the header two rows instead */
 @media(max-width:1000px){
   nav{
-    order:3;width:100%;gap:6px 20px;font-size:.68rem;margin-top:16px;padding:12px 0;
+    order:3;width:100%;gap:6px 18px;font-size:.68rem;margin-top:16px;padding:12px 0;
     border-top:1px solid var(--gold-line);
+    /* the homepage has eight nav links, so without wrapping the row runs past the
+       viewport and gives the whole page a horizontal scrollbar */
+    flex-wrap:wrap;
   }
 }
 .group-tag{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--inv-3);border-left:1px solid var(--gold-line);padding-left:20px}
