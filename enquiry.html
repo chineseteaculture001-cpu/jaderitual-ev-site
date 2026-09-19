@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request a Quote — Electric Three-Wheelers | JadeRitual EV</title>
+<meta name="description" content="Send a wholesale or OEM/ODM enquiry for electric three-wheelers. Tell us your country, WhatsApp number and the build you need — we reply with a written quotation within one business day.">
+<link rel="canonical" href="https://ev.thejaderitual.com/enquiry">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Request a Quote — Electric Three-Wheelers | JadeRitual EV">
+<meta property="og:description" content="Wholesale and OEM/ODM enquiries for electric three-wheelers. Written quotation against your specification.">
+<meta property="og:url" content="https://ev.thejaderitual.com/enquiry">
+<meta name="theme-color" content="#0B1A15">
+<style>
+:root{--ink-950:#08130F;--jade-900:#0F241D;--jade-800:#16332A;--jade-700:#1E4A3B;
+--jade-400:#4E9A82;--gold:#C8A96A;--gold-2:#E0C892;--gold-ink:#836428;--gold-dim:rgba(200,169,106,.30);
+--gold-line:rgba(200,169,106,.22);--paper:#F8F6F1;--paper-2:#EFEBE1;--card:#fff;--line:#DED8C9;
+--txt:#131B18;--txt-2:#414D48;--txt-3:#6B7671;--inv:#F3F0E8;--inv-2:rgba(243,240,232,.74);
+--inv-3:rgba(243,240,232,.58);--red:#A8341F;--maxw:1200px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
+color:var(--txt);background:var(--paper);line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;line-height:1.18;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+.label{font-size:.68rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;
+display:flex;align-items:center;gap:14px}
+.label::after{content:"";height:1px;width:48px;background:var(--gold-dim)}
+.label--ink{color:var(--gold-ink)}.label--ink::after{background:rgba(131,100,40,.34)}
+header{position:sticky;top:0;z-index:60;background:rgba(8,19,15,.92);backdrop-filter:blur(14px);
+border-bottom:1px solid var(--gold-line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
+.brand{display:flex;align-items:center;gap:13px}
+.mark{width:32px;height:32px;flex:none}
+.brand-t{font-family:Georgia,serif;font-size:1.05rem;color:var(--inv);display:block;white-space:nowrap}
+.brand-s{font-size:.58rem;letter-spacing:.26em;color:var(--gold);text-transform:uppercase;display:block;margin-top:2px}
+nav{display:flex;gap:24px;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--inv-2);flex-wrap:wrap}
+nav a:hover{color:var(--gold-2)}
+@media(max-width:1100px){nav{display:none}}
+.hero{padding:84px 0 60px;background:radial-gradient(1100px 620px at 90% -14%,rgba(200,169,106,.15) 0%,rgba(200,169,106,0) 62%),
+linear-gradient(168deg,var(--jade-900) 0%,var(--ink-950) 74%);color:var(--inv)}
+.hero h1{font-size:clamp(1.9rem,3.8vw,2.9rem);color:var(--inv);max-width:22em}
+.hero h1 em{font-style:normal;display:block;color:var(--gold-2);font-size:.56em;margin-top:12px;letter-spacing:0}
+.hero p{margin-top:22px;font-size:1.02rem;color:var(--inv-2);max-width:44em}
+.trust{display:flex;gap:12px 30px;flex-wrap:wrap;margin-top:30px;font-size:.84rem;color:var(--inv-2)}
+.trust div{display:flex;align-items:center;gap:9px}
+.tick{width:14px;height:14px;flex:none;stroke:var(--gold);fill:none;stroke-width:2}
+section{padding:72px 0}
+.cols{display:grid;grid-template-columns:1.62fr 1fr;gap:44px;align-items:start}
+@media(max-width:980px){.cols{grid-template-columns:1fr;gap:36px}}
+.card{background:var(--card);border:1px solid var(--line);padding:34px 36px 38px}
+@media(max-width:560px){.card{padding:24px 20px 28px}}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:620px){.frow{grid-template-columns:1fr}}
+.f{margin-bottom:18px}
+/* direct child only - the checkbox tiles are also <label> and must not inherit
+   the uppercase gold field-label styling */
+.f>label{display:block;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--jade-900);
+font-weight:600;margin-bottom:7px}
+.f>label .req{color:var(--red);margin-left:3px}
+.f .hint{font-size:.76rem;color:var(--txt-3);font-weight:400;letter-spacing:0;text-transform:none;margin-left:8px}
+.f input[type=text],.f input[type=email],.f input[type=tel],.f select,.f textarea{
+width:100%;padding:12px 14px;border:1px solid var(--line);background:var(--paper);color:var(--txt);
+font-size:.94rem;font-family:inherit;border-radius:0;transition:.2s}
+.f textarea{min-height:120px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--gold);
+background:#fff;box-shadow:0 0 0 3px rgba(200,169,106,.18)}
+.f.invalid input,.f.invalid select,.f.invalid textarea{border-color:var(--red);background:#FDF6F4}
+.f .err{display:none;color:var(--red);font-size:.8rem;margin-top:6px}
+.f.invalid .err{display:block}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:9px 16px;margin-top:4px}
+@media(max-width:620px){.checks{grid-template-columns:1fr}}
+.chk{display:flex;align-items:flex-start;gap:9px;font-size:.88rem;color:var(--txt-2);cursor:pointer;
+padding:7px 9px;border:1px solid var(--line);background:var(--paper);transition:.18s}
+.chk:hover{border-color:var(--gold-dim)}
+.chk input{margin-top:4px;accent-color:var(--jade-700);flex:none}
+.chk.on{border-color:var(--gold);background:#FFFDF7}
+.declare{display:flex;align-items:flex-start;gap:11px;margin:20px 0 6px;padding:14px 16px;
+background:var(--paper-2);border-left:3px solid var(--gold);font-size:.86rem;color:var(--txt-2)}
+.declare input{margin-top:4px;accent-color:var(--jade-700);flex:none}
+.hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.actions{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.btn{display:block;width:100%;text-align:center;padding:16px 26px;font-size:.78rem;letter-spacing:.16em;
+text-transform:uppercase;border:1px solid transparent;cursor:pointer;font-family:inherit;transition:.24s}
+.btn-wa{background:var(--gold);color:var(--ink-950);font-weight:600}
+.btn-wa:hover{background:var(--gold-2)}
+.btn-mail{background:transparent;color:var(--gold-ink);border-color:rgba(131,100,40,.4)}
+.btn-mail:hover{border-color:var(--gold-ink);background:var(--paper-2)}
+.fine{font-size:.8rem;color:var(--txt-3);margin-top:16px;line-height:1.6}
+.banner{display:none;padding:15px 18px;margin-bottom:22px;font-size:.9rem;border:1px solid}
+.banner.err{background:#FDF6F4;border-color:#E2B7AC;color:#7B2413}
+.banner.ok{background:#F2F8F4;border-color:#B9D6C4;color:#1E4A3B}
+.side{display:flex;flex-direction:column;gap:24px}
+.sbox{background:var(--card);border:1px solid var(--line);padding:26px 28px}
+.sbox h3{font-size:1.02rem;color:var(--jade-900);margin-bottom:14px}
+.sbox ul{list-style:none}
+.sbox li{position:relative;padding-left:20px;font-size:.88rem;color:var(--txt-2);margin-bottom:9px}
+.sbox li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;
+border:1px solid var(--gold);transform:rotate(45deg)}
+.steps{counter-reset:s}
+.steps li{padding-left:30px;margin-bottom:14px}
+.steps li::before{counter-increment:s;content:counter(s);left:0;top:.1em;width:19px;height:19px;border:0;
+background:var(--jade-900);color:var(--gold-2);font-size:.66rem;display:flex;align-items:center;
+justify-content:center;transform:none;font-family:Georgia,serif}
+.sbox.dark{background:linear-gradient(180deg,var(--jade-900) 0%,var(--ink-950) 100%);border-color:var(--gold-line)}
+.sbox.dark h3{color:var(--inv)}
+.sbox.dark p,.sbox.dark li{color:var(--inv-2)}
+.sbox.dark a{color:var(--gold-2);display:block;margin-bottom:6px;font-size:.9rem}
+.sbox.dark a:hover{color:#fff}
+footer{background:var(--ink-950);color:var(--inv-3);padding:56px 0 44px;font-size:.82rem;
+border-top:1px solid var(--gold-line)}
+.ft{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+.ft a{color:var(--inv-2);transition:.25s}
+.ft a:hover{color:var(--gold-2)}
+.disc{margin-top:22px;padding-top:18px;border-top:1px solid var(--gold-line);color:var(--inv-3);line-height:1.7}
+</style>
+</head>
+<body>
+<header><div class="wrap hd"><a class="brand" href="/"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0B1A15"/><path d="M16 7l6 9-6 9-6-9z" fill="none" stroke="#C8A96A" stroke-width="1.6"/></svg><span><span class="brand-t">JadeRitual EV</span><span class="brand-s">Electric Three-Wheelers</span></span></a><nav><a href="/">Home</a><a href="/models">Models</a><a href="/#range">Range</a><a href="/enquiry">Request a Quote</a></nav></div></header>
+
+<section class="hero"><div class="wrap">
+<div class="label">Request a quote</div>
+<h1>Tell us the build you need<em>把产品需求发给我们</em></h1>
+<p>One form is enough. Give us the market, the build and a quantity range, and we will come back with a written specification and a quotation, or the questions we need answered first.</p>
+<div class="trust">
+<div><svg class="tick" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5"/></svg> Wholesale and OEM / ODM only</div>
+<div><svg class="tick" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5"/></svg> Reply within one business day</div>
+<div><svg class="tick" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5"/></svg> Specification in writing before you commit</div>
+</div>
+</div></section>
+
+<section><div class="wrap"><div class="cols">
+
+<div>
+  <form class="card" id="enquiryForm" novalidate>
+    <div class="label label--ink">Your enquiry</div>
+    <div class="banner" id="banner"></div>
+    <p id="prefill" style="display:none;margin-bottom:18px;padding:11px 14px;background:var(--paper-2);
+      border-left:3px solid var(--gold);font-size:.88rem;color:var(--txt-2)"></p>
+
+    <div class="frow">
+      <div class="f">
+        <label for="country">Country <span class="req">*</span></label>
+        <select id="country" name="country" required>
+          <option value="">Please choose…</option>
+          <optgroup label="Africa"><option value="Nigeria">Nigeria</option><option value="Ghana">Ghana</option><option value="Kenya">Kenya</option><option value="Tanzania">Tanzania</option><option value="Uganda">Uganda</option><option value="Ethiopia">Ethiopia</option><option value="Rwanda">Rwanda</option><option value="Burundi">Burundi</option><option value="South Africa">South Africa</option><option value="Botswana">Botswana</option><option value="Namibia">Namibia</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option><option value="Malawi">Malawi</option><option value="Mozambique">Mozambique</option><option value="Angola">Angola</option><option value="DR Congo">DR Congo</option><option value="Cameroon">Cameroon</option><option value="Senegal">Senegal</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Mali">Mali</option><option value="Burkina Faso">Burkina Faso</option><option value="Guinea">Guinea</option><option value="Sierra Leone">Sierra Leone</option><option value="Liberia">Liberia</option><option value="Togo">Togo</option><option value="Benin">Benin</option><option value="Niger">Niger</option><option value="Chad">Chad</option><option value="Sudan">Sudan</option><option value="South Sudan">South Sudan</option><option value="Somalia">Somalia</option><option value="Egypt">Egypt</option><option value="Libya">Libya</option><option value="Tunisia">Tunisia</option><option value="Algeria">Algeria</option><option value="Morocco">Morocco</option></optgroup><optgroup label="Middle East"><option value="United Arab Emirates">United Arab Emirates</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Oman">Oman</option><option value="Qatar">Qatar</option><option value="Kuwait">Kuwait</option><option value="Bahrain">Bahrain</option><option value="Jordan">Jordan</option><option value="Lebanon">Lebanon</option><option value="Iraq">Iraq</option><option value="Yemen">Yemen</option><option value="Türkiye">Türkiye</option><option value="Israel">Israel</option></optgroup><optgroup label="South Asia"><option value="India">India</option><option value="Pakistan">Pakistan</option><option value="Bangladesh">Bangladesh</option><option value="Nepal">Nepal</option><option value="Sri Lanka">Sri Lanka</option><option value="Afghanistan">Afghanistan</option><option value="Maldives">Maldives</option></optgroup><optgroup label="Southeast Asia"><option value="Indonesia">Indonesia</option><option value="Philippines">Philippines</option><option value="Vietnam">Vietnam</option><option value="Thailand">Thailand</option><option value="Malaysia">Malaysia</option><option value="Myanmar">Myanmar</option><option value="Cambodia">Cambodia</option><option value="Laos">Laos</option><option value="Singapore">Singapore</option><option value="Brunei">Brunei</option><option value="Timor-Leste">Timor-Leste</option></optgroup><optgroup label="Central Asia & Caucasus"><option value="Kazakhstan">Kazakhstan</option><option value="Uzbekistan">Uzbekistan</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Tajikistan">Tajikistan</option><option value="Turkmenistan">Turkmenistan</option><option value="Mongolia">Mongolia</option><option value="Azerbaijan">Azerbaijan</option><option value="Georgia">Georgia</option><option value="Armenia">Armenia</option></optgroup><optgroup label="Latin America & Caribbean"><option value="Mexico">Mexico</option><option value="Brazil">Brazil</option><option value="Colombia">Colombia</option><option value="Peru">Peru</option><option value="Chile">Chile</option><option value="Argentina">Argentina</option><option value="Ecuador">Ecuador</option><option value="Bolivia">Bolivia</option><option value="Paraguay">Paraguay</option><option value="Uruguay">Uruguay</option><option value="Venezuela">Venezuela</option><option value="Guatemala">Guatemala</option><option value="Honduras">Honduras</option><option value="El Salvador">El Salvador</option><option value="Nicaragua">Nicaragua</option><option value="Costa Rica">Costa Rica</option><option value="Panama">Panama</option><option value="Dominican Republic">Dominican Republic</option><option value="Haiti">Haiti</option><option value="Cuba">Cuba</option><option value="Jamaica">Jamaica</option><option value="Trinidad and Tobago">Trinidad and Tobago</option></optgroup><optgroup label="Europe"><option value="United Kingdom">United Kingdom</option><option value="Ireland">Ireland</option><option value="Germany">Germany</option><option value="France">France</option><option value="Spain">Spain</option><option value="Portugal">Portugal</option><option value="Italy">Italy</option><option value="Netherlands">Netherlands</option><option value="Belgium">Belgium</option><option value="Poland">Poland</option><option value="Czechia">Czechia</option><option value="Slovakia">Slovakia</option><option value="Hungary">Hungary</option><option value="Romania">Romania</option><option value="Bulgaria">Bulgaria</option><option value="Greece">Greece</option><option value="Croatia">Croatia</option><option value="Serbia">Serbia</option><option value="Slovenia">Slovenia</option><option value="Sweden">Sweden</option><option value="Norway">Norway</option><option value="Denmark">Denmark</option><option value="Finland">Finland</option><option value="Austria">Austria</option><option value="Switzerland">Switzerland</option><option value="Ukraine">Ukraine</option><option value="Moldova">Moldova</option></optgroup><optgroup label="North America"><option value="United States">United States</option><option value="Canada">Canada</option></optgroup><optgroup label="Oceania"><option value="Australia">Australia</option><option value="New Zealand">New Zealand</option><option value="Fiji">Fiji</option><option value="Papua New Guinea">Papua New Guinea</option></optgroup><option value="Other / not listed">Other / not listed</option>
+        </select>
+        <div class="err"></div>
+      </div>
+      <div class="f">
+        <label for="whatsapp">WhatsApp <span class="req">*</span><span class="hint">with country code</span></label>
+        <input type="tel" id="whatsapp" name="whatsapp" placeholder="+234 801 234 5678"
+               autocomplete="tel" required>
+        <div class="err"></div>
+      </div>
+    </div>
+
+    <div class="frow">
+      <div class="f">
+        <label for="email">Email <span class="req">*</span></label>
+        <input type="email" id="email" name="email" placeholder="you@company.com"
+               autocomplete="email" required>
+        <div class="err"></div>
+      </div>
+      <div class="f">
+        <label for="name">Your name <span class="req">*</span></label>
+        <input type="text" id="name" name="name" placeholder="Full name" autocomplete="name" required>
+        <div class="err"></div>
+      </div>
+    </div>
+
+    <div class="f">
+      <label for="company">Company / business <span class="hint">optional, but it speeds up the quotation</span></label>
+      <input type="text" id="company" name="company" placeholder="Registered name or trading name"
+             autocomplete="organization">
+      <div class="err"></div>
+    </div>
+
+    <div class="frow">
+      <div class="f">
+        <label for="type">Type of enquiry <span class="req">*</span></label>
+        <select id="type" name="type" required>
+          <option value="">Please choose…</option>
+          <option value="Wholesale / Distribution">Wholesale / Distribution</option><option value="OEM / ODM — private label">OEM / ODM — private label</option><option value="Fleet or project tender">Fleet or project tender</option><option value="Sample or trial order">Sample or trial order</option><option value="Spare parts only">Spare parts only</option>
+        </select>
+        <div class="err"></div>
+      </div>
+      <div class="f">
+        <label for="quantity">Estimated quantity <span class="req">*</span></label>
+        <select id="quantity" name="quantity" required>
+          <option value="">Please choose…</option>
+          <option value="1–5 units — sample or trial">1–5 units — sample or trial</option><option value="1 × 20 ft container">1 × 20 ft container</option><option value="1 × 40 ft container">1 × 40 ft container</option><option value="2 or more containers">2 or more containers</option><option value="Ongoing monthly supply">Ongoing monthly supply</option><option value="Not decided yet">Not decided yet</option>
+        </select>
+        <div class="err"></div>
+      </div>
+    </div>
+
+    <div class="f">
+      <label>Body types you are considering <span class="hint">choose any that apply</span></label>
+      <div class="checks"><label class="chk"><input type="checkbox" name="body" value="Utility flatbed"><span>Utility flatbed</span></label><label class="chk"><input type="checkbox" name="body" value="Cargo flatbed"><span>Cargo flatbed</span></label><label class="chk"><input type="checkbox" name="body" value="Semi-enclosed"><span>Semi-enclosed</span></label><label class="chk"><input type="checkbox" name="body" value="Passenger / tuk-tuk"><span>Passenger / tuk-tuk</span></label><label class="chk"><input type="checkbox" name="body" value="Tipper"><span>Tipper</span></label><label class="chk"><input type="checkbox" name="body" value="Spare parts & consumables"><span>Spare parts & consumables</span></label><label class="chk"><input type="checkbox" name="body" value="Not sure — please advise"><span>Not sure — please advise</span></label></div>
+    </div>
+
+    <div class="f">
+      <label for="market">Destination market or port <span class="hint">optional</span></label>
+      <input type="text" id="market" name="market" placeholder="e.g. Nigeria — Lagos / Apapa">
+      <div class="err"></div>
+    </div>
+
+    <div class="f">
+      <label for="details">What do you need? <span class="req">*</span>
+        <span class="hint">payload, road conditions, custom dimensions, branding</span></label>
+      <textarea id="details" name="details" required
+        placeholder="e.g. 2 x 40 ft of cargo flatbeds for last-mile delivery in Lagos. Mostly tarmac, 400 kg payload, 60 km a day. Need the deck at 1500 x 1000 mm and our own logo on the side panels."></textarea>
+      <div class="err"></div>
+    </div>
+
+    <!-- honeypot: hidden from people, irresistible to bots -->
+    <div class="hp" aria-hidden="true">
+      <label for="website">Website</label>
+      <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+    </div>
+
+    <label class="declare">
+      <input type="checkbox" name="declare" required>
+      <span>I confirm this is a genuine trade enquiry and the contact details above are mine.</span>
+    </label>
+
+    <div class="actions">
+      <button type="button" class="btn btn-wa" id="sendWa">Send the enquiry via WhatsApp</button>
+      <button type="button" class="btn btn-mail" id="sendMail">Send it by email instead</button>
+    </div>
+    <p class="fine">
+      Nothing is submitted to this website or to any form service. Your enquiry is placed in your own
+      WhatsApp or mail app with every field filled in, and you press send — which is also why this form
+      does not attract automated spam.
+    </p>
+  </form>
+</div>
+
+<aside class="side">
+  <div class="sbox">
+    <h3>What makes a quote possible</h3>
+    <ul><li>The body or bodies you are considering, and roughly how many units.</li><li>The destination country and port.</li><li>How the vehicles will be used: payload, road surface, daily distance.</li><li>Whether road registration is required, and any voltage or charger standard for your market.</li><li>Any OEM / ODM requirements — private label, colours, deck dimensions, packaging.</li></ul>
+  </div>
+  <div class="sbox">
+    <h3>What happens next</h3>
+    <ul class="steps"><li>Send this form through WhatsApp or your mail app.</li><li>We come back within one business day with questions or a specification to confirm.</li><li>You get a written quotation against that specification, and a sample or trial unit can be arranged before a container order.</li></ul>
+  </div>
+  <div class="sbox dark">
+    <h3>Prefer to message us directly?</h3>
+    <a href="https://wa.me/8618663543398">WhatsApp · +86 186 6354 3398</a>
+    <a href="https://wa.me/8615589482015">WhatsApp · +86 155 8948 2015</a>
+    <a href="mailto:mike@thejaderitual.com">mike@thejaderitual.com</a>
+    <p style="font-size:.84rem;margin-top:14px">
+      Useful first message: payload in kg · road surface · daily distance · destination country and port ·
+      whether road registration is required.
+    </p>
+  </div>
+</aside>
+
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<div class="sbox" style="padding:30px 34px">
+  <div class="label label--ink">Before you send</div>
+  <ul style="display:grid;grid-template-columns:1fr 1fr;gap:4px 34px"><li>We quote against a written specification, so everything you send here goes straight into the quotation.</li><li>Wholesale and OEM / ODM only. Single-unit retail is not available.</li><li>Prices are not published — freight, duty and build differences change the number more than the model does.</li><li>We reply to genuine trade enquiries within one business day.</li></ul>
+  <p style="margin-top:18px;font-size:.9rem;color:var(--txt-2)">
+    Looking for something specific first? The <a href="/models" style="color:var(--gold-ink);
+    border-bottom:1px solid var(--gold-dim)">models page</a> lists the twelve bodies we build most often,
+    with their motor, axle, suspension and tyre sets.
+  </p>
+</div>
+</div></section>
+
+<footer><div class="wrap"><div class="ft"><div>&copy; 2026 JadeRitual EV &middot; Part of <a href="https://thejaderitual.com/">JadeRitual Group</a></div><div style="display:flex;gap:26px;flex-wrap:wrap"><a href="/models">Models</a><a href="/enquiry">Request a quote</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms &amp; Conditions</a></div></div><div class="disc">This site is the electric vehicle division of JadeRitual Group. Vehicle specifications are configured per order and issued in the quotation; nothing on this page should be read as a fixed specification or a certification claim. The enquiry form is completed in your browser and handed to WhatsApp or your mail client — no third-party form service is used and nothing is stored on this site.</div></div></footer></body></html>
+
+<script>
+(function () {
+  var form = document.getElementById('enquiryForm');
+  if (!form) return;
+  var loadedAt = Date.now();
+  var banner = document.getElementById('banner');
+
+  function show(kind, text) {
+    banner.className = 'banner ' + kind;
+    banner.textContent = text;
+    banner.style.display = 'block';
+    banner.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  }
+  function clearBanner() { banner.style.display = 'none'; banner.textContent = ''; }
+
+  var RULES = {
+    name:     function (v) { return v.length >= 2 || 'Please give the name we should address you by.'; },
+    company:  function () { return true; },
+    email:    function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v) || 'Please check the e-mail address.'; },
+    whatsapp: function (v) {
+      var digits = v.replace(/[^0-9]/g, '');
+      return (digits.length >= 7 && digits.length <= 15) ||
+             'Please include the country code, e.g. +234 801 234 5678.';
+    },
+    country:  function (v) { return v !== '' || 'Please choose your country.'; },
+    type:     function (v) { return v !== '' || 'Please choose the type of enquiry.'; },
+    quantity: function (v) { return v !== '' || 'Please give an estimated quantity.'; },
+    details:  function (v) { return v.trim().length >= 15 ||
+             'Please describe the requirement in a line or two (at least 15 characters).'; }
+  };
+
+  // --- anti-spam layer ---------------------------------------------------
+  function spamCheck() {
+    // 1. honeypot - a real visitor never sees this field
+    if (form.elements['website'].value.trim() !== '') {
+      return 'Your message could not be sent. Please contact us on WhatsApp instead.';
+    }
+    // 2. a form completed in under 3 seconds was not completed by a person
+    if (Date.now() - loadedAt < 3000) {
+      return 'Please take a moment to read over your details before sending.';
+    }
+    // 3. explicit trade declaration
+    if (!form.elements['declare'].checked) {
+      return 'Please confirm the declaration before sending.';
+    }
+    return null;
+  }
+
+  function markField(el, good, msg) {
+    var f = el.closest('.f');
+    if (!f) return good;
+    var err = f.querySelector('.err');
+    if (err) err.textContent = good ? '' : msg;
+    f.classList.toggle('invalid', !good);
+    return good;
+  }
+
+  function validate() {
+    var first = null;
+    for (var key in RULES) {
+      var el = form.elements[key];
+      if (!el) continue;
+      var res = RULES[key](String(el.value || '').trim());
+      var good = markField(el, res === true, res === true ? '' : res);
+      if (!good && !first) first = res;
+    }
+    return first;
+  }
+
+  function collect() {
+    var bodies = [];
+    var boxes = form.querySelectorAll('input[name="body"]:checked');
+    for (var i = 0; i < boxes.length; i++) {
+      bodies.push(boxes[i].value);
+      boxes[i].parentNode.classList.add('on');
+    }
+    var g = function (n) { return String((form.elements[n] || {}).value || '').trim(); };
+    return {
+      name: g('name'), company: g('company'), email: g('email'), whatsapp: g('whatsapp'),
+      country: g('country'), type: g('type'), quantity: g('quantity'),
+      market: g('market'), bodies: bodies, details: g('details')
+    };
+  }
+
+  function buildText(d, long) {
+    var L = [];
+    L.push('NEW WHOLESALE ENQUIRY — JadeRitual EV');
+    L.push('');
+    L.push('Country:      ' + d.country);
+    L.push('Name:         ' + d.name + (d.company ? ' — ' + d.company : ''));
+    L.push('WhatsApp:     ' + d.whatsapp);
+    L.push('Email:        ' + d.email);
+    L.push('Enquiry type: ' + d.type);
+    L.push('Quantity:     ' + d.quantity);
+    if (d.bodies.length) L.push('Body type:    ' + d.bodies.join(', '));
+    if (d.market) L.push('Destination:  ' + d.market);
+    L.push('');
+    L.push('Requirement:');
+    L.push(d.details);
+    if (!long) {
+      L.push('');
+      L.push('(Sent from ev.thejaderitual.com — full details in the message above.)');
+    }
+    return L.join('\n');
+  }
+
+  function submitViaWhatsApp() {
+    clearBanner();
+    var s = spamCheck();
+    if (s) { show('err', s); return; }
+    var bad = validate();
+    if (bad) { show('err', bad); return; }
+    var d = collect();
+    var url = 'https://wa.me/8618663543398?text=' + encodeURIComponent(buildText(d));
+    window.open(url, '_blank');
+    show('ok', 'WhatsApp is opening in a new tab with your enquiry ready to send — press send there and we will reply within one business day.');
+  }
+
+  function submitViaEmail() {
+    clearBanner();
+    var s = spamCheck();
+    if (s) { show('err', s); return; }
+    var bad = validate();
+    if (bad) { show('err', bad); return; }
+    var d = collect();
+    var subject = 'Wholesale enquiry — ' + d.country + ' — ' + (d.bodies.length ? d.bodies[0] : 'electric three-wheelers');
+    var url = 'mailto:mike@thejaderitual.com?subject=' + encodeURIComponent(subject) +
+              '&body=' + encodeURIComponent(buildText(d));
+    window.location.href = url;
+    show('ok', 'Your mail app is opening with the enquiry ready to send. If nothing happens, message us on WhatsApp instead.');
+  }
+
+  document.getElementById('sendWa').addEventListener('click', submitViaWhatsApp);
+  document.getElementById('sendMail').addEventListener('click', submitViaEmail);
+  form.addEventListener('submit', function (e) { e.preventDefault(); submitViaWhatsApp(); });
+
+  // keep the checkbox tiles in their selected state
+  var tiles = form.querySelectorAll('.chk input');
+  for (var i = 0; i < tiles.length; i++) {
+    tiles[i].addEventListener('change', function () {
+      this.parentNode.classList.toggle('on', this.checked);
+    });
+  }
+
+  // deep link from a model card: /enquiry?model=Hanfeng
+  var q = new URLSearchParams(window.location.search);
+  var m = q.get('model');
+  if (m) {
+    var box = form.elements['details'];
+    if (box && box.value.trim() === '') {
+      box.value = 'We are interested in the ' + m + '. Please send the specification and a quotation.';
+    }
+    var note = document.getElementById('prefill');
+    if (note) { note.textContent = 'Enquiry about: ' + m; note.style.display = 'block'; }
+    var body = form.querySelector('input[name="body"]');
+    if (body) { body.checked = true; body.parentNode.classList.add('on'); }
+  }
+})();
+</script>
+</body>
+</html>
