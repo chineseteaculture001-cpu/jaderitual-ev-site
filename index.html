@@ -81,7 +81,10 @@ nav a:hover::after{width:100%}
 .group-tag{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--inv-3);border-left:1px solid var(--gold-line);padding-left:20px}
 .group-tag a{color:var(--gold-2)}
 @media(max-width:1000px){
-  .hd{flex-wrap:wrap;height:auto;padding:14px 0 0}
+  /* padding-top, not the padding shorthand: this element is .wrap hd, and a
+     later shorthand at equal specificity would wipe .wrap's 32px side padding
+     and push the header to the screen edges */
+  .hd{flex-wrap:wrap;height:auto;padding-top:14px}
   .group-tag{display:none}
 }
 

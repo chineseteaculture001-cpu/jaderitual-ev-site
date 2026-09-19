@@ -41,7 +41,9 @@ nav a:hover{color:var(--gold-2)}
 /* there is no hamburger, so simply hiding the nav would leave phones with no
    way to reach the other pages; make the header two rows instead */
 @media(max-width:1100px){
-.hd{flex-wrap:wrap;height:auto;padding:14px 0 0}
+/* padding-top, not the shorthand: this element is .wrap hd, and a later
+   shorthand at equal specificity wipes .wrap's 32px side padding */
+.hd{flex-wrap:wrap;height:auto;padding-top:14px}
 nav{order:3;width:100%;gap:6px 20px;font-size:.68rem;margin-top:14px;padding:12px 0;
 border-top:1px solid var(--gold-line)}
 }
