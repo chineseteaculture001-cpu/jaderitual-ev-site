@@ -139,6 +139,11 @@ section{padding:112px 0}
 .cats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 @media(max-width:1000px){.cats{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.cats{grid-template-columns:1fr}}
+/* 4-up variant: must stay a class, never an inline style — an inline
+   grid-template-columns beats every media query and pins the page width. */
+.cats--4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1000px){.cats--4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.cats--4{grid-template-columns:1fr}}
 .cat{background:var(--card);border:1px solid var(--line);padding:34px 28px;transition:.3s;display:flex;flex-direction:column}
 .cat:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 22px 48px -30px rgba(15,36,29,.5)}
 .cat .glyph{font-family:Georgia,"Songti SC",serif;font-size:2.3rem;color:var(--paper-2);line-height:1;margin-bottom:16px}
@@ -411,7 +416,7 @@ footer{background:var(--ink-950);color:var(--inv-3);padding:56px 0 48px;font-siz
         four operations. Every unit we ship passes the same four gates.
       </p>
     </div>
-    <div class="cats" style="grid-template-columns:repeat(4,1fr)">
+    <div class="cats cats--4">
       <div class="cat" style="padding:30px 24px">
         <div class="glyph" style="font-size:2rem">切</div>
         <h3 style="font-size:1rem">Cutting</h3>

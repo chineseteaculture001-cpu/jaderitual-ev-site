@@ -78,6 +78,10 @@ background:#fff;box-shadow:0 0 0 3px rgba(200,169,106,.18)}
 .f.invalid .err{display:block}
 .checks{display:grid;grid-template-columns:1fr 1fr;gap:9px 16px;margin-top:4px}
 @media(max-width:620px){.checks{grid-template-columns:1fr}}
+/* two-up prose list: stays a class so phones can collapse it (an inline
+   grid-template-columns would outrank every media query). */
+.sell{display:grid;grid-template-columns:1fr 1fr;gap:4px 34px}
+@media(max-width:620px){.sell{grid-template-columns:1fr;gap:4px}}
 .chk{display:flex;align-items:flex-start;gap:9px;font-size:.88rem;color:var(--txt-2);cursor:pointer;
 padding:7px 9px;border:1px solid var(--line);background:var(--paper);transition:.18s}
 .chk:hover{border-color:var(--gold-dim)}
@@ -271,7 +275,7 @@ border-top:1px solid var(--gold-line)}
 <section style="padding-top:0"><div class="wrap">
 <div class="sbox" style="padding:30px 34px">
   <div class="label label--ink">Before you send</div>
-  <ul style="display:grid;grid-template-columns:1fr 1fr;gap:4px 34px"><li>We quote against a written specification, so everything you send here goes straight into the quotation.</li><li>Wholesale and OEM / ODM only. Single-unit retail is not available.</li><li>Prices are not published — freight, duty and build differences change the number more than the model does.</li><li>We reply to genuine trade enquiries within one business day.</li></ul>
+  <ul class="sell"><li>We quote against a written specification, so everything you send here goes straight into the quotation.</li><li>Wholesale and OEM / ODM only. Single-unit retail is not available.</li><li>Prices are not published — freight, duty and build differences change the number more than the model does.</li><li>We reply to genuine trade enquiries within one business day.</li></ul>
   <p style="margin-top:18px;font-size:.9rem;color:var(--txt-2)">
     Looking for something specific first? The <a href="/models" style="color:var(--gold-ink);
     border-bottom:1px solid var(--gold-dim)">models page</a> lists the twelve bodies we build most often,
