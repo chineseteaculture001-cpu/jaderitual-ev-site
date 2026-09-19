@@ -35,7 +35,13 @@ header{position:sticky;top:0;z-index:60;background:rgba(8,19,15,.9);backdrop-fil
 .brand-s{font-size:.58rem;letter-spacing:.26em;color:var(--gold);text-transform:uppercase;display:block;margin-top:2px}
 nav{display:flex;gap:24px;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--inv-2);flex-wrap:wrap}
 nav a:hover{color:var(--gold-2)}
-@media(max-width:1100px){nav{display:none}}
+/* there is no hamburger, so simply hiding the nav left phones with no way to
+   reach the other pages; make the header two rows instead */
+@media(max-width:1100px){
+.hd{flex-wrap:wrap;height:auto;padding:14px 0 0}
+nav{order:3;width:100%;gap:6px 20px;font-size:.68rem;margin-top:14px;padding:12px 0;
+border-top:1px solid var(--gold-line)}
+}
 .hd-cta{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-950);background:var(--gold);padding:11px 22px;font-weight:600}
 .hero{padding:96px 0 76px;background:radial-gradient(1100px 620px at 90% -14%,rgba(200,169,106,.15) 0%,rgba(200,169,106,0) 62%),
 linear-gradient(168deg,var(--jade-900) 0%,var(--ink-950) 74%);color:var(--inv)}
@@ -50,6 +56,11 @@ section{padding:88px 0}
 .sec-head{max-width:48em;margin-bottom:48px}
 .sec-head h2{font-size:clamp(1.5rem,2.6vw,2.1rem);color:var(--jade-900)}
 .sec-head p{margin-top:18px;color:var(--txt-2)}
+/* .sec-head h2 and .sec-head p carry the same specificity as .sec-dark h2 and
+   .sec-dark p but sit later in the sheet, so inside a dark section they win and
+   paint dark-on-dark. Restate them with a heavier selector. */
+.sec-dark .sec-head h2{color:var(--inv)}
+.sec-dark .sec-head p{color:var(--inv-2)}
 .grid{display:grid;gap:26px;grid-template-columns:repeat(3,1fr)}
 @media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:660px){.grid{grid-template-columns:1fr}}
@@ -81,7 +92,9 @@ table.bld tr:last-child td{border-bottom:0}
 .btn{display:inline-block;padding:15px 30px;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;border:1px solid transparent;transition:.26s}
 .btn-solid{background:var(--gold);color:var(--ink-950);font-weight:600}
 .btn-solid:hover{background:var(--gold-2)}
-.btn-ghost{color:var(--gold-ink);border-color:rgba(131,100,40,.34)}
+/* .btn-ghost only appears in the dark hero, so it needs the light gold -
+   --gold-ink on the dark gradient measures under 3:1 */
+.btn-ghost{color:var(--gold-2);border-color:var(--gold-dim)}
 .cta{display:flex;gap:16px;margin-top:32px;flex-wrap:wrap}
 footer{background:var(--ink-950);color:var(--inv-2);padding:56px 0 30px;border-top:1px solid var(--gold-line)}
 .f-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:32px}

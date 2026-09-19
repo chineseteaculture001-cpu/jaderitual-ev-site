@@ -38,7 +38,13 @@ border-bottom:1px solid var(--gold-line)}
 .brand-s{font-size:.58rem;letter-spacing:.26em;color:var(--gold);text-transform:uppercase;display:block;margin-top:2px}
 nav{display:flex;gap:24px;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--inv-2);flex-wrap:wrap}
 nav a:hover{color:var(--gold-2)}
-@media(max-width:1100px){nav{display:none}}
+/* there is no hamburger, so simply hiding the nav would leave phones with no
+   way to reach the other pages; make the header two rows instead */
+@media(max-width:1100px){
+.hd{flex-wrap:wrap;height:auto;padding:14px 0 0}
+nav{order:3;width:100%;gap:6px 20px;font-size:.68rem;margin-top:14px;padding:12px 0;
+border-top:1px solid var(--gold-line)}
+}
 .hero{padding:84px 0 60px;background:radial-gradient(1100px 620px at 90% -14%,rgba(200,169,106,.15) 0%,rgba(200,169,106,0) 62%),
 linear-gradient(168deg,var(--jade-900) 0%,var(--ink-950) 74%);color:var(--inv)}
 .hero h1{font-size:clamp(1.9rem,3.8vw,2.9rem);color:var(--inv);max-width:22em}
