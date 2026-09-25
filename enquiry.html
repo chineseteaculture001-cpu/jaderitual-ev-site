@@ -13,11 +13,34 @@
 <meta property="og:url" content="https://ev.thejaderitual.com/enquiry">
 <meta name="theme-color" content="#0B1A15">
 <style>
+
+/* ---------- language strip ----------
+   Where a visitor looks for it: top right of the first screen. It used to be the
+   last column of the footer, which meant scrolling to the bottom of the page to
+   find your own language. The strip scrolls away with the page; the sticky
+   header below it is unchanged. */
+.util{background:var(--ink-950);border-bottom:1px solid var(--gold-line)}
+.util .wrap{display:flex;align-items:center;justify-content:flex-end;gap:14px;padding:8px 0}
+.util-l{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--inv-3)}
+@media(max-width:560px){.util-l{display:none}}
+#google_translate_element{font-size:.75rem}
+#google_translate_element .goog-te-gadget{color:var(--inv-3)!important;font-size:.75rem!important;white-space:nowrap}
+#google_translate_element select,#google_translate_element .goog-te-combo{background:var(--card)!important;color:var(--inv)!important;border:1px solid var(--gold-line)!important;border-radius:0!important;padding:4px 6px!important;margin:0!important;font-size:.74rem!important;font-family:inherit!important;max-width:190px;height:26px!important;line-height:1!important}
+.util{max-height:52px;overflow:hidden}
+#google_translate_element{display:flex;align-items:center;height:30px;flex:0 0 auto;min-width:max-content;white-space:nowrap}
+#google_translate_element .goog-te-gadget{display:flex;align-items:center;line-height:1;background:transparent!important;white-space:nowrap!important}
+#google_translate_element .goog-te-gadget-icon{display:none!important}
+#google_translate_element .goog-te-gadget-simple{background:transparent!important;border:0!important;padding:0!important;font-size:.74rem!important;white-space:nowrap!important}
+#google_translate_element .goog-te-gadget-simple a,#google_translate_element .goog-te-gadget-simple span{color:var(--inv-3)!important;background:transparent!important;text-decoration:none!important}
+#google_translate_element .goog-te-gadget-simple img{display:none!important}
+
+body{top:0!important}
+.skiptranslate iframe{display:none!important}
 :root{--ink-950:#08130F;--jade-900:#0F241D;--jade-800:#16332A;--jade-700:#1E4A3B;
---jade-400:#4E9A82;--gold:#C8A96A;--gold-2:#E0C892;--gold-ink:#836428;--gold-dim:rgba(200,169,106,.30);
---gold-line:rgba(200,169,106,.22);--paper:#F8F6F1;--paper-2:#EFEBE1;--card:#fff;--line:#DED8C9;
---txt:#131B18;--txt-2:#414D48;--txt-3:#6B7671;--inv:#F3F0E8;--inv-2:rgba(243,240,232,.74);
---inv-3:rgba(243,240,232,.58);--red:#A8341F;--maxw:1200px}
+--jade-400:#4E9A82;--gold:#C8A96A;--gold-2:#E0C892;--gold-ink:#D9BE86;--gold-dim:rgba(200,169,106,.30);
+--gold-line:rgba(200,169,106,.22);--paper:#0F241D;--paper-2:#0A1A15;--card:#16332A;--line:rgba(200,169,106,.22);
+--txt:#F3F0E8;--txt-2:rgba(243,240,232,.74);--txt-3:rgba(243,240,232,.58);--inv:#F3F0E8;--inv-2:rgba(243,240,232,.74);
+--inv-3:rgba(243,240,232,.58);--red:#E8765F;--maxw:1200px}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
@@ -65,7 +88,7 @@ section{padding:72px 0}
 .f{margin-bottom:18px}
 /* direct child only - the checkbox tiles are also <label> and must not inherit
    the uppercase gold field-label styling */
-.f>label{display:block;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--jade-900);
+.f>label{display:block;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--inv);
 font-weight:600;margin-bottom:7px}
 .f>label .req{color:var(--red);margin-left:3px}
 .f .hint{font-size:.76rem;color:var(--txt-3);font-weight:400;letter-spacing:0;text-transform:none;margin-left:8px}
@@ -74,8 +97,8 @@ width:100%;padding:12px 14px;border:1px solid var(--line);background:var(--paper
 font-size:.94rem;font-family:inherit;border-radius:0;transition:.2s}
 .f textarea{min-height:120px;resize:vertical}
 .f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--gold);
-background:#fff;box-shadow:0 0 0 3px rgba(200,169,106,.18)}
-.f.invalid input,.f.invalid select,.f.invalid textarea{border-color:var(--red);background:#FDF6F4}
+background:var(--card);box-shadow:0 0 0 3px rgba(200,169,106,.18)}
+.f.invalid input,.f.invalid select,.f.invalid textarea{border-color:var(--red);background:rgba(168,52,31,.16)}
 .f .err{display:none;color:var(--red);font-size:.8rem;margin-top:6px}
 .f.invalid .err{display:block}
 .checks{display:grid;grid-template-columns:1fr 1fr;gap:9px 16px;margin-top:4px}
@@ -87,26 +110,26 @@ background:#fff;box-shadow:0 0 0 3px rgba(200,169,106,.18)}
 .chk{display:flex;align-items:flex-start;gap:9px;font-size:.88rem;color:var(--txt-2);cursor:pointer;
 padding:7px 9px;border:1px solid var(--line);background:var(--paper);transition:.18s}
 .chk:hover{border-color:var(--gold-dim)}
-.chk input{margin-top:4px;accent-color:var(--jade-700);flex:none}
-.chk.on{border-color:var(--gold);background:#FFFDF7}
+.chk input{margin-top:4px;accent-color:var(--gold);flex:none}
+.chk.on{border-color:var(--gold);background:rgba(200,169,106,.14)}
 .declare{display:flex;align-items:flex-start;gap:11px;margin:20px 0 6px;padding:14px 16px;
 background:var(--paper-2);border-left:3px solid var(--gold);font-size:.86rem;color:var(--txt-2)}
-.declare input{margin-top:4px;accent-color:var(--jade-700);flex:none}
+.declare input{margin-top:4px;accent-color:var(--gold);flex:none}
 .hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
 .actions{display:flex;flex-direction:column;gap:12px;margin-top:24px}
 .btn{display:block;width:100%;text-align:center;padding:16px 26px;font-size:.78rem;letter-spacing:.16em;
 text-transform:uppercase;border:1px solid transparent;cursor:pointer;font-family:inherit;transition:.24s}
 .btn-wa{background:var(--gold);color:var(--ink-950);font-weight:600}
 .btn-wa:hover{background:var(--gold-2)}
-.btn-mail{background:transparent;color:var(--gold-ink);border-color:rgba(131,100,40,.4)}
+.btn-mail{background:transparent;color:var(--gold-ink);border-color:var(--gold-dim)}
 .btn-mail:hover{border-color:var(--gold-ink);background:var(--paper-2)}
 .fine{font-size:.8rem;color:var(--txt-3);margin-top:16px;line-height:1.6}
 .banner{display:none;padding:15px 18px;margin-bottom:22px;font-size:.9rem;border:1px solid}
-.banner.err{background:#FDF6F4;border-color:#E2B7AC;color:#7B2413}
-.banner.ok{background:#F2F8F4;border-color:#B9D6C4;color:#1E4A3B}
+.banner.err{background:rgba(168,52,31,.16);border-color:rgba(226,140,124,.45);color:#F6C9BC}
+.banner.ok{background:rgba(78,154,130,.16);border-color:rgba(185,214,196,.42);color:#CBE7D9}
 .side{display:flex;flex-direction:column;gap:24px}
 .sbox{background:var(--card);border:1px solid var(--line);padding:26px 28px}
-.sbox h3{font-size:1.02rem;color:var(--jade-900);margin-bottom:14px}
+.sbox h3{font-size:1.02rem;color:var(--inv);margin-bottom:14px}
 .sbox ul{list-style:none}
 .sbox li{position:relative;padding-left:20px;font-size:.88rem;color:var(--txt-2);margin-bottom:9px}
 .sbox li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;
@@ -130,6 +153,7 @@ border-top:1px solid var(--gold-line)}
 </style>
 </head>
 <body>
+<div class="util"><div class="wrap"><span class="util-l">Language</span><div id="google_translate_element"></div></div></div>
 <header><div class="wrap hd"><a class="brand" href="/"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0B1A15"/><path d="M16 7l6 9-6 9-6-9z" fill="none" stroke="#C8A96A" stroke-width="1.6"/></svg><span><span class="brand-t">JadeRitual EV</span><span class="brand-s">Electric Three-Wheelers</span></span></a><nav><a href="/">Home</a><a href="/models">Models</a><a href="/#range">Range</a><a href="/enquiry">Request a Quote</a></nav></div></header>
 
 <section class="hero"><div class="wrap">
@@ -137,7 +161,7 @@ border-top:1px solid var(--gold-line)}
 <h1>Tell us the build you need<em>把产品需求发给我们</em></h1>
 <p>One form is enough. Give us the market, the build and a quantity range, and we will come back with a written specification and a quotation, or the questions we need answered first.</p>
 <div class="trust">
-<div><svg class="tick" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5"/></svg> Wholesale and OEM / ODM only</div>
+<div><svg class="tick" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5"/></svg> Trade supply, sample orders and OEM / ODM</div>
 <div><svg class="tick" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5"/></svg> Reply within one business day</div>
 <div><svg class="tick" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5"/></svg> Specification in writing before you commit</div>
 </div>
@@ -277,7 +301,7 @@ border-top:1px solid var(--gold-line)}
 <section style="padding-top:0"><div class="wrap">
 <div class="sbox" style="padding:30px 34px">
   <div class="label label--ink">Before you send</div>
-  <ul class="sell"><li>We quote against a written specification, so everything you send here goes straight into the quotation.</li><li>Wholesale and OEM / ODM only. Single-unit retail is not available.</li><li>Prices are not published — freight, duty and build differences change the number more than the model does.</li><li>We reply to genuine trade enquiries within one business day.</li></ul>
+  <ul class="sell"><li>We quote against a written specification, so everything you send here goes straight into the quotation.</li><li>No minimum order. One unit is quoted at wholesale too, and the unit price moves with the quantity.</li><li>Prices are not published — freight, duty and build differences change the number more than the model does.</li><li>We reply to genuine trade enquiries within one business day.</li></ul>
   <p style="margin-top:18px;font-size:.9rem;color:var(--txt-2)">
     Looking for something specific first? The <a href="/models" style="color:var(--gold-ink);
     border-bottom:1px solid var(--gold-dim)">models page</a> lists the twelve bodies we build most often,
@@ -447,5 +471,11 @@ border-top:1px solid var(--gold-line)}
   }
 })();
 </script>
+<script>
+function googleTranslateElementInit(){
+  new google.translate.TranslateElement({pageLanguage:'en',layout:google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay:false},'google_translate_element');
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit&hl=en" async></script>
 </body>
 </html>

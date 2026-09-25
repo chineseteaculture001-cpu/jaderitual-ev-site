@@ -13,10 +13,33 @@
 <meta property="og:url" content="https://ev.thejaderitual.com/range/utility-flatbed">
 <meta name="theme-color" content="#0B1A15">
 <style>
+
+/* ---------- language strip ----------
+   Where a visitor looks for it: top right of the first screen. It used to be the
+   last column of the footer, which meant scrolling to the bottom of the page to
+   find your own language. The strip scrolls away with the page; the sticky
+   header below it is unchanged. */
+.util{background:var(--ink-950);border-bottom:1px solid var(--gold-line)}
+.util .wrap{display:flex;align-items:center;justify-content:flex-end;gap:14px;padding:8px 0}
+.util-l{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--inv-3)}
+@media(max-width:560px){.util-l{display:none}}
+#google_translate_element{font-size:.75rem}
+#google_translate_element .goog-te-gadget{color:var(--inv-3)!important;font-size:.75rem!important;white-space:nowrap}
+#google_translate_element select,#google_translate_element .goog-te-combo{background:var(--card)!important;color:var(--inv)!important;border:1px solid var(--gold-line)!important;border-radius:0!important;padding:4px 6px!important;margin:0!important;font-size:.74rem!important;font-family:inherit!important;max-width:190px;height:26px!important;line-height:1!important}
+.util{max-height:52px;overflow:hidden}
+#google_translate_element{display:flex;align-items:center;height:30px;flex:0 0 auto;min-width:max-content;white-space:nowrap}
+#google_translate_element .goog-te-gadget{display:flex;align-items:center;line-height:1;background:transparent!important;white-space:nowrap!important}
+#google_translate_element .goog-te-gadget-icon{display:none!important}
+#google_translate_element .goog-te-gadget-simple{background:transparent!important;border:0!important;padding:0!important;font-size:.74rem!important;white-space:nowrap!important}
+#google_translate_element .goog-te-gadget-simple a,#google_translate_element .goog-te-gadget-simple span{color:var(--inv-3)!important;background:transparent!important;text-decoration:none!important}
+#google_translate_element .goog-te-gadget-simple img{display:none!important}
+
+body{top:0!important}
+.skiptranslate iframe{display:none!important}
 :root{--ink-950:#08130F;--jade-900:#0F241D;--jade-800:#16332A;--jade-700:#1E4A3B;
---jade-400:#4E9A82;--gold:#C8A96A;--gold-2:#E0C892;--gold-ink:#836428;--gold-dim:rgba(200,169,106,.30);
---gold-line:rgba(200,169,106,.22);--paper:#F8F6F1;--paper-2:#EFEBE1;--card:#fff;--line:#DED8C9;
---txt:#131B18;--txt-2:#414D48;--txt-3:#6B7671;--inv:#F3F0E8;--inv-2:rgba(243,240,232,.74);--maxw:1200px}
+--jade-400:#4E9A82;--gold:#C8A96A;--gold-2:#E0C892;--gold-ink:#D9BE86;--gold-dim:rgba(200,169,106,.30);
+--gold-line:rgba(200,169,106,.22);--paper:#0F241D;--paper-2:#0A1A15;--card:#16332A;--line:rgba(200,169,106,.22);
+--txt:#F3F0E8;--txt-2:rgba(243,240,232,.74);--txt-3:rgba(243,240,232,.58);--inv:#F3F0E8;--inv-2:rgba(243,240,232,.74);--maxw:1200px}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
 color:var(--txt);background:var(--paper);line-height:1.7;-webkit-font-smoothing:antialiased}
@@ -56,7 +79,7 @@ section{padding:88px 0}
 .sec-dark p{color:var(--inv-2)}
 .sec-dark .label--ink{color:var(--gold)}.sec-dark .label--ink::after{background:var(--gold-dim)}
 .sec-head{max-width:48em;margin-bottom:48px}
-.sec-head h2{font-size:clamp(1.5rem,2.6vw,2.1rem);color:var(--jade-900)}
+.sec-head h2{font-size:clamp(1.5rem,2.6vw,2.1rem);color:var(--inv)}
 .sec-head p{margin-top:18px;color:var(--txt-2)}
 /* .sec-head h2 and .sec-head p carry the same specificity as .sec-dark h2 and
    .sec-dark p but sit later in the sheet, so inside a dark section they win and
@@ -71,13 +94,13 @@ section{padding:88px 0}
 .mcard .ph{aspect-ratio:4/3;background:var(--paper-2);overflow:hidden}
 .mcard .ph img{width:100%;height:100%;object-fit:cover}
 .mcard .bd{padding:20px 22px 24px;flex:1;display:flex;flex-direction:column}
-.mcard h3{font-size:1.02rem;color:var(--jade-900);display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+.mcard h3{font-size:1.02rem;color:var(--inv);display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
 .mcode{font-size:.78rem;color:var(--txt-3);font-weight:400;border:1px solid var(--line);
 padding:1px 7px;letter-spacing:.02em;font-family:"PingFang SC","Microsoft YaHei",sans-serif;white-space:nowrap}
 .mcard .deck{font-size:.8rem;color:var(--gold-ink);letter-spacing:.04em;margin:4px 0 14px}
 .mcard .mq{margin-top:auto;padding-top:15px;border-top:1px solid var(--line);font-size:.72rem;
 letter-spacing:.12em;text-transform:uppercase;color:var(--gold-ink)}
-.mcard .mq:hover{color:var(--jade-900)}
+.mcard .mq:hover{color:var(--inv)}
 .spec{width:100%;border-collapse:collapse;font-size:.83rem}
 .spec th{text-align:left;font-weight:400;color:var(--txt-3);width:38%;padding:6px 0;vertical-align:top;font-size:.74rem;letter-spacing:.06em;text-transform:uppercase}
 .spec td{color:var(--txt-2);padding:6px 0;border-bottom:1px solid var(--line)}
@@ -87,8 +110,8 @@ table.bld{width:100%;border-collapse:collapse;background:var(--card);border:1px 
    explicit colour here the cells inherit that and vanish on the white card */
 table.bld th,table.bld td{text-align:left;padding:16px 20px;border-bottom:1px solid var(--line);
 font-size:.9rem;vertical-align:top;color:var(--txt-2)}
-table.bld th{background:var(--paper-2);font-weight:400;color:var(--jade-900);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase}
-table.bld td:first-child{color:var(--jade-900);font-weight:500}
+table.bld th{background:var(--paper-2);font-weight:400;color:var(--inv);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase}
+table.bld td:first-child{color:var(--inv);font-weight:500}
 table.bld tr:last-child td{border-bottom:0}
 .note{margin-top:22px;font-size:.88rem;color:var(--txt-3)}
 .btn{display:inline-block;padding:15px 30px;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;border:1px solid transparent;transition:.26s}
@@ -112,7 +135,7 @@ border:1px solid var(--line);margin-bottom:44px}
 .famnav a{background:var(--card);padding:22px 24px;display:block;transition:.26s}
 .famnav a:hover{background:var(--paper-2)}
 .famnav strong{display:block;font-family:Georgia,"Times New Roman",serif;font-weight:400;
-font-size:1.02rem;color:var(--jade-900)}
+font-size:1.02rem;color:var(--inv)}
 .famnav span{display:block;margin-top:7px;font-size:.78rem;color:var(--txt-3)}
 .famnav--dark a{background:rgba(255,255,255,.04)}
 .famnav--dark a:hover{background:rgba(255,255,255,.08)}
@@ -127,6 +150,7 @@ font-size:1.02rem;color:var(--jade-900)}
 </style>
 </head>
 <body>
+<div class="util"><div class="wrap"><span class="util-l">Language</span><div id="google_translate_element"></div></div></div>
 <header><div class="wrap hd"><a class="brand" href="/"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0B1A15"/><path d="M16 7l6 9-6 9-6-9z" fill="none" stroke="#C8A96A" stroke-width="1.6"/></svg><span><span class="brand-t">JadeRitual EV</span><span class="brand-s">Electric Three-Wheelers</span></span></a><nav><a href="/">Home</a><a href="/models">Models</a><a href="/#range">Range</a><a href="/#quality">Quality</a><a href="/enquiry">Request a Quote</a></nav><a class="hd-cta" href="/enquiry">Request a quote</a></div></header>
 <section class="hero"><div class="wrap">
 <div class="label">Body types</div>
@@ -155,4 +179,10 @@ font-size:1.02rem;color:var(--jade-900)}
 <p>Every family is built to order, and most buyers order across more than one.</p></div>
 <div class="famnav"><a href="/range/cargo-flatbed"><strong>Cargo Flatbed</strong><span>1300–1800 mm &middot; 800–1200 W &middot; 6 models</span></a><a href="/range/semi-enclosed"><strong>Semi-Enclosed</strong><span>1500–1800 mm &middot; 800–1200 W &middot; 4 models</span></a></div>
 </div></section>
-<footer><div class="wrap"><div class="f-grid"><div><a class="brand" href="/"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0B1A15"/><path d="M16 7l6 9-6 9-6-9z" fill="none" stroke="#C8A96A" stroke-width="1.6"/></svg><span><span class="brand-t">JadeRitual EV</span><span class="brand-s">Electric Three-Wheelers</span></span></a><p style="margin-top:16px;font-size:.87rem;max-width:32em">A division of JadeRitual Group. We specify, consolidate and export electric three-wheelers for wholesale buyers and fleets.</p></div><div><h4>Models</h4><ul><li><a href="/models">All models</a></li><li><a href="/range/utility-flatbed">Utility flatbeds</a></li><li><a href="/range/cargo-flatbed">Cargo flatbeds</a></li><li><a href="/range/semi-enclosed">Semi-enclosed</a></li><li><a href="/models#config">Build configurations</a></li><li><a href="/enquiry">Request a quote</a></li><li><a href="/#range">Range overview</a></li></ul></div><div><h4>Legal</h4><ul><li><a href="/privacy">Privacy</a></li><li><a href="/terms">Terms</a></li><li><a href="https://thejaderitual.com/">JadeRitual Group</a></li></ul></div></div><div class="f-bot">&copy; 2026 JadeRitual EV &middot; JadeRitual Group</div></div></footer></body></html>
+<footer><div class="wrap"><div class="f-grid"><div><a class="brand" href="/"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0B1A15"/><path d="M16 7l6 9-6 9-6-9z" fill="none" stroke="#C8A96A" stroke-width="1.6"/></svg><span><span class="brand-t">JadeRitual EV</span><span class="brand-s">Electric Three-Wheelers</span></span></a><p style="margin-top:16px;font-size:.87rem;max-width:32em">A division of JadeRitual Group. We specify, consolidate and export electric three-wheelers for wholesale buyers and fleets.</p></div><div><h4>Models</h4><ul><li><a href="/models">All models</a></li><li><a href="/range/utility-flatbed">Utility flatbeds</a></li><li><a href="/range/cargo-flatbed">Cargo flatbeds</a></li><li><a href="/range/semi-enclosed">Semi-enclosed</a></li><li><a href="/models#config">Build configurations</a></li><li><a href="/enquiry">Request a quote</a></li><li><a href="/#range">Range overview</a></li></ul></div><div><h4>Legal</h4><ul><li><a href="/privacy">Privacy</a></li><li><a href="/terms">Terms</a></li><li><a href="https://thejaderitual.com/">JadeRitual Group</a></li></ul></div></div><div class="f-bot">&copy; 2026 JadeRitual EV &middot; JadeRitual Group</div></div></footer><script>
+function googleTranslateElementInit(){
+  new google.translate.TranslateElement({pageLanguage:'en',layout:google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay:false},'google_translate_element');
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit&hl=en" async></script>
+</body></html>
