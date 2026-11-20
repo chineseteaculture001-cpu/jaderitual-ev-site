@@ -55,13 +55,13 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://ev.thejaderitual.com/passenger</loc>
+    <loc>https://ev.thejaderitual.com/range/passenger</loc>
     <lastmod>2026-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ev.thejaderitual.com/tipper</loc>
+    <loc>https://ev.thejaderitual.com/range/tipper</loc>
     <lastmod>2026-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
